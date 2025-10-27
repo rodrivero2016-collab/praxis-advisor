@@ -4,12 +4,12 @@ A Flask API that uses Claude AI to generate professional project charters
 """
 
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 from anthropic import Anthropic
 import os
 from datetime import datetime
 
 app = Flask(__name__)
-rom flask_cors import CORS
 CORS(app)
 # Initialize Anthropic client
 # You'll set ANTHROPIC_API_KEY as an environment variable
