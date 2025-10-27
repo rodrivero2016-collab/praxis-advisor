@@ -10,7 +10,7 @@ import os
 from datetime import datetime
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, resources={r"/*": {"origins": "*"}})
 # Initialize Anthropic client
 # You'll set ANTHROPIC_API_KEY as an environment variable
 client = Anthropic(api_key=os.environ.get("ANTHROPIC_API_KEY"))
